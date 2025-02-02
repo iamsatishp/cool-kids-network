@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="wpv-fv" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd">
+	<description>The custom ruleset for the VIP Coding Standards itself.</description>
+​
+	<file>.</file>
+	<!-- Exclude Composer vendor directory. -->
+	<exclude-pattern>*/.git/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>/docker/*</exclude-pattern>
+	<exclude-pattern>/node_modules/*</exclude-pattern>
+	<exclude-pattern>/tests/*</exclude-pattern>
+
+	<config name="minimum_supported_wp_version" value="6.7" />
+​
+	<rule ref="WordPress-Extra"/>
+​
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array" value="ckn" />
+		</properties>
+	</rule>
+	
+	<!-- Check code for cross-version PHP compatibility. -->
+	<rule ref="WordPress-Core"/>
+​
+</ruleset>
