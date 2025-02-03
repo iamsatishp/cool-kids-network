@@ -69,6 +69,7 @@ class Cool_Kids_Network {
 	 */
 	private function setup() {
 		new Roles();
+		new Sign_Up();
 	}
 }
 
