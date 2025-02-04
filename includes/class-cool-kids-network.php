@@ -71,6 +71,7 @@ class Cool_Kids_Network {
 		new Roles();
 		new Sign_Up();
 		new Sign_In();
+		new Character_Data();
 	}
 }
 

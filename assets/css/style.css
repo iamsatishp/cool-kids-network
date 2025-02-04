@@ -67,3 +67,7 @@
     color: #ff0000;
     font-size: 14px;
 }
+
+.ckn-all-character-data{
+    overflow-x:auto;
+}

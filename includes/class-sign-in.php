@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * The Sing In class will manage the sign in process of user.
+ * The Sign In class will manage the sign in process of user.
  */
 class Sign_In {
 
