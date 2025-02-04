@@ -46,7 +46,7 @@ class Cool_Kids_Network {
 	public function __construct() {
 		$this->setup();
 		// Enqueue JavaScript for AJAX
-		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 	}
 
 	/**
@@ -57,7 +57,7 @@ class Cool_Kids_Network {
 	 * @return void
 	 */
 	public function enqueue_scripts() {
-		wp_enqueue_style( 'ckn-style', CKN_PATH . 'assets/css/style.css', [], CKN_VERSION );
+		wp_enqueue_style( 'ckn-style', CKN_PATH . 'assets/css/style.css', array(), CKN_VERSION );
 	}
 
 	/**
@@ -70,6 +70,7 @@ class Cool_Kids_Network {
 	private function setup() {
 		new Roles();
 		new Sign_Up();
+		new Sign_In();
 	}
 }
 
