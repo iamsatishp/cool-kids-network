@@ -48,7 +48,7 @@ class Character_Data {
 	 */
 	public function render_character_data() {
 		if ( ! is_user_logged_in() ) {
-			return '<p>Please <a href="' . home_url( '/login' ) . '">log in</a> to view character data.</p>';
+			return '<p>Please <a href="' . esc_url( home_url( '/sign-in' ) ) . '">log in</a> to view character data.</p>';
 		}
 
 		$user = wp_get_current_user();
