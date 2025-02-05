@@ -60,7 +60,7 @@ class Sign_In {
 	 */
 	public function render_ckn_login_form() {
 		if ( is_user_logged_in() ) {
-			return '<p>You are already logged in. <a href="' . wp_logout_url( home_url() ) . '">Log out</a></p>';
+			return '<p>You are already logged in. <a href="' . esc_url( wp_logout_url( home_url() ) ) . '">Log out</a></p>';
 		}
 
 		ob_start();
@@ -103,8 +103,10 @@ class Sign_In {
 			'ckn-signin',
 			'signin_ajax',
 			array(
-				'ajax_url' => admin_url( 'admin-ajax.php' ),
-				'nonce'    => wp_create_nonce( 'ckn_signin_nonce' ), // Add nonce for AJAX
+				'ajax_url'   => admin_url( 'admin-ajax.php' ),
+				'nonce'      => wp_create_nonce( 'ckn_signin_nonce' ), // Add nonce for AJAX
+				'rest_url'   => get_rest_url(),
+				'rest_nonce' => wp_create_nonce( 'wp_rest' ),
 			)
 		);
 	}
