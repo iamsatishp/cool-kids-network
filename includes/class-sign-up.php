@@ -95,7 +95,7 @@ class Sign_Up {
 	 * @return void
 	 */
 	public function enqueue_scripts() {
-		wp_enqueue_script( 'ckn-signup', CKN_PATH . 'assets/js/sign-up.js', array(), CKN_VERSION, array() );
+		wp_enqueue_script( 'ckn-signup', CKN_URL . 'assets/js/sign-up.js', array(), CKN_VERSION, array() );
 		wp_localize_script(
 			'ckn-signup',
 			'signup_ajax',

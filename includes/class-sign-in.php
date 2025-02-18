@@ -98,7 +98,7 @@ class Sign_In {
 	 * @return void
 	 */
 	public function enqueue_scripts() {
-		wp_enqueue_script( 'ckn-signin', CKN_PATH . 'assets/js/sign-in.js', array(), CKN_VERSION, array() );
+		wp_enqueue_script( 'ckn-signin', CKN_URL . 'assets/js/sign-in.js', array(), CKN_VERSION, array() );
 		wp_localize_script(
 			'ckn-signin',
 			'signin_ajax',

@@ -57,7 +57,7 @@ class Cool_Kids_Network {
 	 * @return void
 	 */
 	public function enqueue_scripts() {
-		wp_enqueue_style( 'ckn-style', CKN_PATH . 'assets/css/style.css', array(), CKN_VERSION );
+		wp_enqueue_style( 'ckn-style', CKN_URL . 'assets/css/style.css', array(), CKN_VERSION );
 	}
 
 	/**
